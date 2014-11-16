@@ -50,6 +50,7 @@ public class ChargeServer {
 			Iterator<SelectionKey> it = iterator.iterator();
 			while(it.hasNext()){
 				SelectionKey key = it.next();
+				it.remove();
 				if(key.isAcceptable()){
 					//服务器端
 					ServerSocketChannel server = (ServerSocketChannel) key.channel();
