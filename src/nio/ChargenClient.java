@@ -26,5 +26,7 @@ public class ChargenClient {
 			out.write(buffer);
 			buffer.clear();
 		}
+		System.out.println("服务器端信息接收完毕断开连接");
+		client.close();
 	}
 }

@@ -77,12 +77,15 @@ public class ChargeServer {
 					}
 					try {
 						client.write(buffer);
+						client.close();
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
+						System.out.println("客户端断开连接");
 					}
 				}
 			}
 		}
 	}
+	
 }
