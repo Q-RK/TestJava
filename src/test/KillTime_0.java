@@ -24,6 +24,12 @@ import java.util.Set;
  */
 public class KillTime_0 {
 
+	/**
+	 * 效率低
+	 * @param inputStr
+	 * @param lInputLen
+	 * @param outputStr
+	 */
 	private static void stringFilter(char[] inputStr,long lInputLen,char[] outputStr){
 		Set<Character> charSet = new HashSet<Character>();
 		int j = 0;
