@@ -6,7 +6,7 @@ import redis.clients.jedis.JedisPoolConfig;
 
 public class TestRedis {
 	//Redis服务器IP
-    private static String ADDR = "localhost";
+    private static String ADDR = "211.151.175.160";
 	     
 	     //Redis的端口号
 	     private static int PORT = 6379;
@@ -41,7 +41,7 @@ public class TestRedis {
 	             config.setMaxIdle(MAX_IDLE);
 	             config.setMaxWaitMillis(MAX_WAIT);
 	             config.setTestOnBorrow(TEST_ON_BORROW);
-	             jedisPool = new JedisPool(config, ADDR, PORT, TIMEOUT); //本地无密码
+	             jedisPool = new JedisPool(config, ADDR, PORT, TIMEOUT); //无密码
 	         } catch (Exception e) {
 	             e.printStackTrace();
 	         }
@@ -49,7 +49,18 @@ public class TestRedis {
 	     
 	     public static void main(String[] args) {
 	    	 Jedis j = getJedis();
-	    	 returnResource(j);
+	    	 try {
+	    		 //System.out.println(j.keys("*sms*"));
+		    	 //j.set("smsweidu#A#106285818","A@106285818@375a3b9d-a8d9-4384-aaae-f9b0c110bc3d");
+		    	 //String s = j.get("smsweidu#A#106285818");
+		    	// System.out.println(s);
+			} catch (Exception e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}
+	    	finally {
+	    		returnResource(j);
+			}
 		}
 	     /**
 	          * 获取Jedis实例
