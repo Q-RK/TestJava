@@ -1,4 +1,4 @@
-package sort;
+package algorithm.sort;
 
 public class SelectSort {
 	void sort(int a[]) {
