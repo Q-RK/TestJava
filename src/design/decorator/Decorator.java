@@ -1,4 +1,4 @@
-package decorator;
+package design.decorator;
 
 public class Decorator implements Component {
 

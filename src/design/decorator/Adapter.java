@@ -1,4 +1,4 @@
-package decorator;
+package design.decorator;
 /**
  * 适配器模式
  * 源(Adapee)角色：ConcreteComponent

@@ -1,4 +1,4 @@
-package decorator;
+package design.decorator;
 
 public interface Component {
 public void setText(String s);
